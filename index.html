@@ -139,10 +139,14 @@ p{
 
 .carousel-track img{
   height:48px;
-  opacity:.85;
-  filter:grayscale(100%);
+  opacity:.9;
+  transition:opacity 0.3s ease, transform 0.3s ease;
 }
 
+.carousel-track img:hover{
+  opacity:1;
+  transform:scale(1.05);
+}
 @keyframes scroll{
   from{transform:translateX(0);}
   to{transform:translateX(-50%);}
@@ -360,3 +364,4 @@ footer{
 
 </body>
 </html>
+
