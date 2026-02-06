@@ -4,19 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- Primary SEO -->
   <title>Welcon Equipments | Industrial Water Treatment for FMCG & Conglomerates</title>
-  <meta name="description" content="Welcon Equipments delivers large-scale industrial water and wastewater treatment solutions for global FMCG manufacturers and conglomerates across India and South Asia."/>
-  <meta name="keywords" content="industrial water treatment, FMCG water systems, effluent treatment plant, ZLD systems, RO plants, water treatment India"/>
-
-  <!-- Social Sharing (LinkedIn / WhatsApp) -->
-  <meta property="og:title" content="Welcon Equipments | Industrial Water Treatment for FMCG"/>
-  <meta property="og:description" content="Engineering large-scale water & wastewater treatment systems for global FMCG and manufacturing operations."/>
-  <meta property="og:type" content="website"/>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%231F6FD6'/%3E%3Cstop offset='100%25' stop-color='%230B1C2D'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='18' fill='url(%23g)'/%3E%3Cpath d='M22 28 C30 70,42 70,50 42 C58 70,70 70,78 28' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"/>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -24,41 +12,31 @@
     :root{
       --navy:#0b1c2d;
       --blue:#1f6fd6;
+      --teal:#2ec4b6;
       --steel:#eef2f6;
-      --dark:#08131f;
+      --dark:#07121f;
       --white:#ffffff;
     }
     *{margin:0;padding:0;box-sizing:border-box}
     body{
       font-family:'Inter',sans-serif;
-      background:#fff;
       color:var(--navy);
       line-height:1.7;
+      background:#fff;
     }
+
     header{
       position:fixed;
       width:100%;
-      background:rgba(11,28,45,.95);
+      background:rgba(7,18,31,.95);
       padding:18px 64px;
       display:flex;
       justify-content:space-between;
       align-items:center;
       z-index:1000;
     }
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      color:#fff;
-      font-weight:700;
-      letter-spacing:.4px;
-    }
-    nav a{
-      color:#fff;
-      margin-left:32px;
-      text-decoration:none;
-      font-weight:500;
-    }
+    .logo{display:flex;align-items:center;gap:12px;color:#fff;font-weight:700}
+    nav a{color:#fff;margin-left:32px;text-decoration:none}
 
     /* HERO */
     .hero{
@@ -68,58 +46,59 @@
       align-items:center;
       color:#fff;
       background:
-        linear-gradient(rgba(11,28,45,.75),rgba(11,28,45,.75)),
-        url('https://images.unsplash.com/photo-1581091870627-3c81c02a86a4') center/cover no-repeat;
+        linear-gradient(120deg,rgba(11,28,45,.85),rgba(31,111,214,.65)),
+        url('https://images.unsplash.com/photo-1602526216431-ec0c3c88fbd6') center/cover no-repeat;
     }
-    .hero h1{
-      font-size:56px;
-      max-width:900px;
-      margin-bottom:22px;
-    }
-    .hero p{
-      font-size:20px;
-      max-width:760px;
-      margin-bottom:42px;
-    }
+    .hero h1{font-size:56px;max-width:900px;margin-bottom:24px}
+    .hero p{font-size:20px;max-width:760px;margin-bottom:44px}
 
     .btn{
-      padding:14px 34px;
-      border-radius:6px;
+      padding:14px 36px;
+      border-radius:30px;
       border:none;
       font-size:16px;
       font-weight:600;
       cursor:pointer;
+      background:linear-gradient(135deg,var(--teal),var(--blue));
+      color:#fff;
     }
-    .primary{background:var(--blue);color:#fff}
 
     section{padding:120px 64px}
 
     /* TRUST */
     .trust{
-      background:var(--steel);
+      background:
+        linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.92)),
+        url('https://images.unsplash.com/photo-1581090700227-1e37b190418e') center/cover no-repeat;
       text-align:center;
     }
-    .trust h3{font-size:30px;margin-bottom:18px}
+    .trust h3{font-size:32px;margin-bottom:20px}
     .trust p{max-width:960px;margin:auto;font-size:18px}
 
     /* SOLUTIONS */
     .solutions{
+      background:linear-gradient(180deg,#ffffff,#f4f8fb);
+    }
+    .solution-grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
-      gap:42px;
+      gap:36px;
+      margin-top:40px;
     }
-    .card{
-      padding:44px;
-      border-radius:14px;
-      border:1px solid #e2e7ed;
-      background:#fff;
-      transition:.3s;
+    .solution{
+      background:
+        linear-gradient(rgba(11,28,45,.75),rgba(11,28,45,.75)),
+        url('https://images.unsplash.com/photo-1590650046871-92c887180603') center/cover no-repeat;
+      color:#fff;
+      padding:48px;
+      border-radius:18px;
+      font-weight:500;
     }
-    .card:hover{transform:translateY(-6px)}
 
     /* PROCESS */
     .process{
-      background:var(--navy);
+      background:
+        linear-gradient(135deg,var(--navy),var(--dark));
       color:#fff;
     }
     .steps{
@@ -128,24 +107,31 @@
       gap:30px;
       margin-top:48px;
       text-align:center;
-      font-weight:500;
     }
 
-    /* CASES */
+    /* EXPERIENCE */
+    .experience{
+      background:
+        linear-gradient(rgba(255,255,255,.9),rgba(255,255,255,.9)),
+        url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789') center/cover no-repeat;
+    }
     .cases{
       display:grid;
       grid-template-columns:repeat(2,1fr);
-      gap:42px;
+      gap:40px;
+      margin-top:40px;
     }
     .case{
-      background:var(--steel);
+      background:#ffffff;
       padding:42px;
-      border-radius:14px;
+      border-radius:18px;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
     }
 
     /* CONTACT */
     .contact{
-      background:var(--dark);
+      background:
+        linear-gradient(135deg,#0b1c2d,#1f6fd6);
       color:#fff;
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -160,7 +146,7 @@
     }
 
     footer{
-      background:#050c14;
+      background:#040b13;
       color:#aaa;
       text-align:center;
       padding:40px;
@@ -168,7 +154,7 @@
 
     @media(max-width:900px){
       header,section,.hero{padding:40px}
-      .solutions,.cases,.contact,.steps{grid-template-columns:1fr}
+      .solution-grid,.cases,.contact,.steps{grid-template-columns:1fr}
       .hero h1{font-size:36px}
     }
   </style>
@@ -177,21 +163,7 @@
 <body>
 
 <header>
-  <div class="logo">
-    <svg width="36" height="36" viewBox="0 0 100 100">
-      <defs>
-        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#1F6FD6"/>
-          <stop offset="100%" stop-color="#0B1C2D"/>
-        </linearGradient>
-      </defs>
-      <rect width="100" height="100" rx="18" fill="url(#grad)"/>
-      <path d="M22 28 C30 70,42 70,50 42 C58 70,70 70,78 28"
-            stroke="white" stroke-width="7" fill="none"
-            stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    Welcon Equipments
-  </div>
+  <div class="logo">Welcon Equipments</div>
   <nav>
     <a href="#solutions">Solutions</a>
     <a href="#experience">Experience</a>
@@ -204,57 +176,54 @@
     <h1>Engineering Water Systems for Large-Scale FMCG Operations</h1>
     <p>
       End-to-end industrial water and wastewater treatment solutions for
-      mission-critical manufacturing facilities across India and South Asia.
+      global FMCG manufacturers and conglomerates across South Asia.
     </p>
-    <button class="btn primary">Request Technical Consultation</button>
+    <button class="btn">Request Technical Consultation</button>
   </div>
 </section>
 
 <section class="trust">
-  <h3>Trusted Execution Partner</h3>
+  <h3>Trusted by Global FMCG & Manufacturing Leaders</h3>
   <p>
-    Welcon Equipments partners with <strong>global beverage manufacturers</strong>,
-    <strong>large FMCG corporations</strong>, and <strong>diversified conglomerates</strong>,
+    Welcon Equipments partners with global beverage manufacturers,
+    large FMCG corporations, and diversified conglomerates,
     delivering reliable, compliant, and scalable water treatment systems.
   </p>
 </section>
 
-<section id="solutions">
-  <h2>Our Solutions</h2><br/>
-  <div class="solutions">
-    <div class="card">Raw Water Treatment Systems for High-Capacity Plants</div>
-    <div class="card">RO / UF / DM Systems for Beverage & Process Applications</div>
-    <div class="card">Effluent Treatment Plants (ETP)</div>
-    <div class="card">Zero Liquid Discharge (ZLD) Solutions</div>
-    <div class="card">Sewage Treatment Plants (STP)</div>
-    <div class="card">Operations & Maintenance Services</div>
+<section id="solutions" class="solutions">
+  <h2>Our Solutions</h2>
+  <div class="solution-grid">
+    <div class="solution">Raw Water Treatment Systems</div>
+    <div class="solution">RO / UF / DM Systems</div>
+    <div class="solution">Effluent Treatment Plants (ETP)</div>
+    <div class="solution">Zero Liquid Discharge (ZLD)</div>
+    <div class="solution">Sewage Treatment Plants (STP)</div>
+    <div class="solution">Operations & Maintenance</div>
   </div>
 </section>
 
 <section class="process">
   <h2>How We Execute</h2>
   <div class="steps">
-    <div>Assessment & Water Audit</div>
-    <div>Custom Engineering Design</div>
-    <div>Fabrication & Installation</div>
-    <div>Commissioning & Validation</div>
-    <div>Operations & O&M Support</div>
+    <div>Assessment</div>
+    <div>Engineering</div>
+    <div>Installation</div>
+    <div>Commissioning</div>
+    <div>O&M</div>
   </div>
 </section>
 
-<section id="experience">
-  <h2>Project Experience</h2><br/>
+<section id="experience" class="experience">
+  <h2>Project Experience</h2>
   <div class="cases">
     <div class="case">
       <strong>Global Beverage Manufacturer – South Asia</strong><br/><br/>
-      Capacity: &gt;1 MLD<br/>
-      Solution: RO + ZLD<br/>
-      Outcome: High water recovery and zero discharge compliance
+      RO + ZLD systems delivering high recovery and compliance
     </div>
     <div class="case">
       <strong>Leading FMCG Manufacturer – India</strong><br/><br/>
-      Solution: Advanced ETP and reuse systems<br/>
-      Outcome: Regulatory compliance and reduced operating cost
+      Advanced ETP and reuse solutions reducing discharge
     </div>
   </div>
 </section>
@@ -262,12 +231,11 @@
 <section id="contact" class="contact">
   <div>
     <h2>Contact Us</h2><br/>
-    <p><strong>Contact Person:</strong><br/>Mr. Raman Krishnamurthy</p><br/>
+    <p><strong>Mr. Raman Krishnamurthy</strong></p>
     <p>
-      <strong>Office Address:</strong><br/>
       W 27, N Main Rd,<br/>
       C-Sector, Anna Nagar West Extension,<br/>
-      Chennai, Tamil Nadu – 600101, India
+      Chennai – 600101, India
     </p>
   </div>
   <form>
@@ -280,7 +248,7 @@
     </select>
     <input type="email" placeholder="Business Email" required>
     <input placeholder="Capacity Requirement (MLD/KLD)">
-    <button class="btn primary">Schedule Consultation</button>
+    <button class="btn">Schedule Consultation</button>
   </form>
 </section>
 
