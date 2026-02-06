@@ -103,7 +103,7 @@ p{
   padding:36px;
 }
 
-/* EXECUTION STEPS */
+/* EXECUTION */
 .steps{
   display:grid;
   grid-template-columns:repeat(5,1fr);
@@ -154,6 +154,59 @@ p{
   color:#fff;
 }
 
+.contact-wrapper{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:64px;
+  align-items:flex-start;
+}
+
+.contact-details p{
+  margin-bottom:12px;
+}
+
+form{
+  background:#fff;
+  padding:36px;
+  border-radius:12px;
+}
+
+form label{
+  font-size:13px;
+  font-weight:600;
+  display:block;
+  margin-bottom:6px;
+  color:var(--navy);
+}
+
+form input, form textarea{
+  width:100%;
+  padding:12px 14px;
+  margin-bottom:18px;
+  border:1px solid var(--border);
+  border-radius:6px;
+  font-family:Inter,sans-serif;
+}
+
+form textarea{
+  resize:vertical;
+  min-height:120px;
+}
+
+form button{
+  background:var(--navy);
+  color:#fff;
+  border:none;
+  padding:14px 28px;
+  font-weight:600;
+  cursor:pointer;
+  border-radius:6px;
+}
+
+form button:hover{
+  opacity:.9;
+}
+
 /* FOOTER */
 footer{
   background:#060e16;
@@ -166,8 +219,14 @@ footer{
 @media(max-width:900px){
   section{padding:80px 32px}
   .grid,.steps{grid-template-columns:1fr}
+  .contact-wrapper{grid-template-columns:1fr}
   h1{font-size:36px}
-  .carousel-track{animation:none;flex-wrap:wrap;justify-content:center}
+  .carousel-track{
+    animation:none;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:40px;
+  }
 }
 </style>
 </head>
@@ -222,16 +281,15 @@ footer{
 
   <div class="client-carousel">
     <div class="carousel-track">
-      <img src="assets/logos/cocacola.svg" alt="Coca-Cola">
-      <img src="assets/logos/pepsico.svg" alt="PepsiCo">
-      <img src="assets/logos/bisleri.svg" alt="Bisleri">
-      <img src="assets/logos/reliance.svg" alt="Reliance Industries">
+      <img src="idY0MNSLm4_1770383235798.svg" alt="Coca-Cola">
+      <img src="pepsico-2025-logo-brandlogos.net_k8mh5g32.svg" alt="PepsiCo">
+      <img src="Bisleri_logo.svg" alt="Bisleri">
+      <img src="Logo.svg" alt="Reliance Industries">
 
-      <!-- duplicate -->
-      <img src="assets/logos/cocacola.svg" alt="">
-      <img src="assets/logos/pepsico.svg" alt="">
-      <img src="assets/logos/bisleri.svg" alt="">
-      <img src="assets/logos/reliance.svg" alt="">
+      <img src="idY0MNSLm4_1770383235798.svg" alt="">
+      <img src="pepsico-2025-logo-brandlogos.net_k8mh5g32.svg" alt="">
+      <img src="Bisleri_logo.svg" alt="">
+      <img src="Logo.svg" alt="">
     </div>
   </div>
 </section>
@@ -266,13 +324,34 @@ footer{
 <!-- CONTACT -->
 <section class="contact">
   <div class="topic">CONTACT</div>
-  <h2>Get in Touch</h2>
-  <p><strong>Mr. Raman Krishnamurthy</strong></p>
-  <p>
-    W 27, N Main Rd,<br/>
-    Anna Nagar West Extension,<br/>
-    Chennai – 600101
-  </p>
+  <div class="contact-wrapper">
+    <div class="contact-details">
+      <h2>Get in Touch</h2>
+      <p><strong>Mr. Raman Krishnamurthy</strong></p>
+      <p>
+        W 27, N Main Rd,<br/>
+        Anna Nagar West Extension,<br/>
+        Chennai – 600101
+      </p>
+    </div>
+
+    <!-- FORM (no backend yet) -->
+    <form>
+      <label>Name</label>
+      <input type="text" placeholder="Your name">
+
+      <label>Email</label>
+      <input type="email" placeholder="Your email">
+
+      <label>Company</label>
+      <input type="text" placeholder="Company name">
+
+      <label>Message</label>
+      <textarea placeholder="Tell us about your requirement"></textarea>
+
+      <button type="submit">Submit Enquiry</button>
+    </form>
+  </div>
 </section>
 
 <footer>
