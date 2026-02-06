@@ -4,23 +4,22 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Welcon Equipments | Industrial Water Treatment for FMCG & Conglomerates</title>
+<title>Welcon Equipments | Industrial Water Treatment</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --navy:#0b1c2d;
-  --blue:#1f6fd6;
-  --light:#f4f8fb;
-  --border:#e4e9ef;
+  --light:#f6f8fb;
+  --border:#e3e8ee;
 }
 body{
   margin:0;
   font-family:Inter,sans-serif;
-  color:#0b1c2d;
-  line-height:1.7;
+  color:var(--navy);
   background:#fff;
+  line-height:1.7;
 }
 header{
   position:fixed;
@@ -28,9 +27,7 @@ header{
   width:100%;
   background:#fff;
   border-bottom:1px solid var(--border);
-  padding:16px 56px;
-  display:flex;
-  align-items:center;
+  padding:18px 56px;
   z-index:1000;
 }
 .brand{
@@ -50,66 +47,50 @@ header{
 section{
   padding:120px 64px;
 }
+.section-light{background:#fff;}
+.section-grey{background:var(--light);}
+.topic{
+  font-size:13px;
+  letter-spacing:3px;
+  font-weight:600;
+  margin-bottom:12px;
+}
+h1{font-size:52px;max-width:900px;}
+h2{font-size:32px;margin-bottom:12px;}
+p{max-width:800px;}
+
 .hero{
   padding-top:160px;
 }
-.hero h1{
-  font-size:52px;
-  max-width:900px;
-}
-.hero p{
-  font-size:20px;
-  max-width:720px;
-  margin-top:20px;
-}
-.trust{
-  background:var(--light);
-  text-align:center;
-}
-.trust p{
-  max-width:900px;
-  margin:auto;
-}
-.solutions .grid{
+
+.grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:32px;
-  margin-top:40px;
+  margin-top:48px;
 }
 .card{
+  background:#fff;
   border:1px solid var(--border);
-  padding:36px;
   border-radius:10px;
-}
-.process{
-  background:#eef5fb;
+  padding:36px;
 }
 .steps{
   display:grid;
   grid-template-columns:repeat(5,1fr);
   gap:24px;
-  margin-top:40px;
+  margin-top:48px;
 }
 .step{
+  border:1px solid var(--border);
   background:#fff;
   padding:24px;
   border-radius:10px;
-  border:1px solid var(--border);
   text-align:center;
-}
-.experience{
-  text-align:center;
-}
-.experience p{
-  max-width:800px;
-  margin:auto;
 }
 .contact{
   background:var(--navy);
   color:#fff;
-}
-.contact-box{
-  max-width:900px;
 }
 footer{
   background:#060e16;
@@ -117,10 +98,11 @@ footer{
   text-align:center;
   padding:32px;
 }
+
 @media(max-width:900px){
   section{padding:80px 32px}
-  .solutions .grid,.steps{grid-template-columns:1fr}
-  .hero h1{font-size:36px}
+  .grid,.steps{grid-template-columns:1fr}
+  h1{font-size:36px}
 }
 </style>
 </head>
@@ -153,7 +135,9 @@ footer{
   </div>
 </header>
 
-<section class="hero">
+<!-- HERO -->
+<section class="hero section-light">
+  <div class="topic">POSITIONING</div>
   <h1>Engineering Water Treatment Systems for Large FMCG Operations</h1>
   <p>
     End-to-end industrial water and wastewater treatment solutions
@@ -161,16 +145,21 @@ footer{
   </p>
 </section>
 
-<section class="trust">
+<!-- WHO WE SERVE -->
+<section class="section-grey">
+  <div class="topic">WHO WE SERVE</div>
   <h2>Trusted Water Treatment Partner</h2>
   <p>
-    Supporting global beverage manufacturers, FMCG companies and conglomerates
-    with reliable, compliant, and scalable water treatment systems.
+    Welcon Equipments supports global beverage manufacturers,
+    large FMCG companies, and diversified conglomerates
+    with reliable and compliant water treatment systems.
   </p>
 </section>
 
-<section class="solutions">
-  <h2>Our Water Treatment Solutions</h2>
+<!-- SOLUTIONS -->
+<section class="section-light">
+  <div class="topic">SOLUTIONS</div>
+  <h2>Our Water Treatment Capabilities</h2>
   <div class="grid">
     <div class="card">Raw Water Treatment Systems</div>
     <div class="card">RO / UF / DM Plants</div>
@@ -181,35 +170,40 @@ footer{
   </div>
 </section>
 
-<section class="process">
-  <h2>Execution Approach</h2>
+<!-- EXECUTION -->
+<section class="section-grey">
+  <div class="topic">EXECUTION MODEL</div>
+  <h2>How We Execute</h2>
   <div class="steps">
     <div class="step">Water Audit</div>
-    <div class="step">Engineering</div>
+    <div class="step">Engineering Design</div>
     <div class="step">Fabrication</div>
     <div class="step">Commissioning</div>
-    <div class="step">O&M</div>
+    <div class="step">O&M Support</div>
   </div>
 </section>
 
-<section class="experience">
-  <h2>Project Experience</h2>
+<!-- EXPERIENCE -->
+<section class="section-light">
+  <div class="topic">PROJECT EXPERIENCE</div>
+  <h2>Proven at Scale</h2>
   <p>
-    Delivered large-scale water treatment, reuse, and compliance-driven projects
-    for global FMCG and beverage operations across South Asia.
+    Delivered large-scale water treatment, reuse,
+    and compliance-driven projects for global FMCG
+    and beverage operations across South Asia.
   </p>
 </section>
 
+<!-- CONTACT -->
 <section class="contact">
-  <div class="contact-box">
-    <h2>Contact</h2>
-    <p><strong>Mr. Raman Krishnamurthy</strong></p>
-    <p>
-      W 27, N Main Rd,<br/>
-      Anna Nagar West Extension,<br/>
-      Chennai – 600101
-    </p>
-  </div>
+  <div class="topic">CONTACT</div>
+  <h2>Get in Touch</h2>
+  <p><strong>Mr. Raman Krishnamurthy</strong></p>
+  <p>
+    W 27, N Main Rd,<br/>
+    Anna Nagar West Extension,<br/>
+    Chennai – 600101
+  </p>
 </section>
 
 <footer>© 2026 Welcon Equipments</footer>
