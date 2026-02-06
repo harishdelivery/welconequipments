@@ -12,8 +12,8 @@
     :root{
       --navy:#0b1c2d;
       --blue:#1f6fd6;
-      --teal:#2ec4b6;
-      --steel:#eef2f6;
+      --aqua:#2ec4b6;
+      --steel:#eef6f9;
       --dark:#07121f;
       --white:#ffffff;
     }
@@ -35,10 +35,10 @@
       align-items:center;
       z-index:1000;
     }
-    .logo{display:flex;align-items:center;gap:12px;color:#fff;font-weight:700}
+    .logo{color:#fff;font-weight:700;font-size:18px}
     nav a{color:#fff;margin-left:32px;text-decoration:none}
 
-    /* HERO */
+    /* HERO – WATER TREATMENT PLANT */
     .hero{
       height:100vh;
       padding:0 64px;
@@ -46,8 +46,8 @@
       align-items:center;
       color:#fff;
       background:
-        linear-gradient(120deg,rgba(11,28,45,.85),rgba(31,111,214,.65)),
-        url('https://images.unsplash.com/photo-1602526216431-ec0c3c88fbd6') center/cover no-repeat;
+        linear-gradient(rgba(11,28,45,.75),rgba(11,28,45,.75)),
+        url('https://images.unsplash.com/photo-1582719478185-2c6e8c6a1a75') center/cover no-repeat;
     }
     .hero h1{font-size:56px;max-width:900px;margin-bottom:24px}
     .hero p{font-size:20px;max-width:760px;margin-bottom:44px}
@@ -59,25 +59,25 @@
       font-size:16px;
       font-weight:600;
       cursor:pointer;
-      background:linear-gradient(135deg,var(--teal),var(--blue));
+      background:linear-gradient(135deg,var(--aqua),var(--blue));
       color:#fff;
     }
 
     section{padding:120px 64px}
 
-    /* TRUST */
+    /* TRUST – WATER INFRASTRUCTURE */
     .trust{
       background:
         linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.92)),
-        url('https://images.unsplash.com/photo-1581090700227-1e37b190418e') center/cover no-repeat;
+        url('https://images.unsplash.com/photo-1601050690597-df0568f70950') center/cover no-repeat;
       text-align:center;
     }
     .trust h3{font-size:32px;margin-bottom:20px}
     .trust p{max-width:960px;margin:auto;font-size:18px}
 
-    /* SOLUTIONS */
+    /* SOLUTIONS – RO / ETP / ZLD */
     .solutions{
-      background:linear-gradient(180deg,#ffffff,#f4f8fb);
+      background:linear-gradient(180deg,#ffffff,#f0f8fb);
     }
     .solution-grid{
       display:grid;
@@ -88,17 +88,18 @@
     .solution{
       background:
         linear-gradient(rgba(11,28,45,.75),rgba(11,28,45,.75)),
-        url('https://images.unsplash.com/photo-1590650046871-92c887180603') center/cover no-repeat;
+        url('https://images.unsplash.com/photo-1624555130581-1d9cca783bc0') center/cover no-repeat;
       color:#fff;
       padding:48px;
       border-radius:18px;
       font-weight:500;
     }
 
-    /* PROCESS */
+    /* EXECUTION – CONTROL & PROCESS */
     .process{
       background:
-        linear-gradient(135deg,var(--navy),var(--dark));
+        linear-gradient(rgba(7,18,31,.9),rgba(7,18,31,.9)),
+        url('https://images.unsplash.com/photo-1581092334651-ddf26d9a09d1') center/cover no-repeat;
       color:#fff;
     }
     .steps{
@@ -109,11 +110,11 @@
       text-align:center;
     }
 
-    /* EXPERIENCE */
+    /* EXPERIENCE – WATER RECYCLING */
     .experience{
       background:
-        linear-gradient(rgba(255,255,255,.9),rgba(255,255,255,.9)),
-        url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789') center/cover no-repeat;
+        linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.92)),
+        url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf') center/cover no-repeat;
     }
     .cases{
       display:grid;
@@ -128,10 +129,11 @@
       box-shadow:0 10px 30px rgba(0,0,0,.08);
     }
 
-    /* CONTACT */
+    /* CONTACT – SUBTLE WATER TEXTURE */
     .contact{
       background:
-        linear-gradient(135deg,#0b1c2d,#1f6fd6);
+        linear-gradient(135deg,#0b1c2d,#1f6fd6),
+        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd') center/cover no-repeat;
       color:#fff;
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -173,29 +175,29 @@
 
 <section class="hero">
   <div>
-    <h1>Engineering Water Systems for Large-Scale FMCG Operations</h1>
+    <h1>Engineering Water Treatment Systems for Large FMCG Operations</h1>
     <p>
-      End-to-end industrial water and wastewater treatment solutions for
-      global FMCG manufacturers and conglomerates across South Asia.
+      End-to-end industrial water and wastewater treatment solutions
+      for beverage, FMCG, and large manufacturing facilities across South Asia.
     </p>
     <button class="btn">Request Technical Consultation</button>
   </div>
 </section>
 
 <section class="trust">
-  <h3>Trusted by Global FMCG & Manufacturing Leaders</h3>
+  <h3>Trusted Water Treatment Partner</h3>
   <p>
-    Welcon Equipments partners with global beverage manufacturers,
-    large FMCG corporations, and diversified conglomerates,
-    delivering reliable, compliant, and scalable water treatment systems.
+    Welcon Equipments supports global beverage manufacturers,
+    large FMCG corporations, and conglomerates with
+    reliable, compliant, and scalable water treatment systems.
   </p>
 </section>
 
 <section id="solutions" class="solutions">
-  <h2>Our Solutions</h2>
+  <h2>Our Water Treatment Solutions</h2>
   <div class="solution-grid">
     <div class="solution">Raw Water Treatment Systems</div>
-    <div class="solution">RO / UF / DM Systems</div>
+    <div class="solution">RO / UF / DM Plants</div>
     <div class="solution">Effluent Treatment Plants (ETP)</div>
     <div class="solution">Zero Liquid Discharge (ZLD)</div>
     <div class="solution">Sewage Treatment Plants (STP)</div>
@@ -204,13 +206,13 @@
 </section>
 
 <section class="process">
-  <h2>How We Execute</h2>
+  <h2>Our Execution Approach</h2>
   <div class="steps">
-    <div>Assessment</div>
-    <div>Engineering</div>
+    <div>Water Audit</div>
+    <div>Engineering Design</div>
     <div>Installation</div>
     <div>Commissioning</div>
-    <div>O&M</div>
+    <div>O&M Support</div>
   </div>
 </section>
 
@@ -219,11 +221,11 @@
   <div class="cases">
     <div class="case">
       <strong>Global Beverage Manufacturer – South Asia</strong><br/><br/>
-      RO + ZLD systems delivering high recovery and compliance
+      RO + ZLD systems delivering high recovery and regulatory compliance
     </div>
     <div class="case">
       <strong>Leading FMCG Manufacturer – India</strong><br/><br/>
-      Advanced ETP and reuse solutions reducing discharge
+      Advanced ETP and water reuse solutions
     </div>
   </div>
 </section>
