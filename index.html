@@ -1,92 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Welcon Equipments | Industrial Water Treatment for FMCG & Conglomerates</title>
+<title>Welcon Equipments | Industrial Water Treatment for FMCG & Conglomerates</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%231F6FD6'/%3E%3Cstop offset='100%25' stop-color='%232EC4B6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M120 24 C158 30 186 44 186 44 V118 C186 154 154 182 120 204 C86 182 54 154 54 118 V44 C54 44 82 30 120 24 Z' fill='url(%23g)' stroke='%230B1C2D' stroke-width='8'/%3E%3C/svg%3E"/>
-
-  <style>
-    body{margin:0;font-family:Inter,sans-serif;color:#0b1c2d;line-height:1.7}
-    header{
-      position:fixed;top:0;width:100%;z-index:1000;
-      background:rgba(7,18,31,.96);
-      padding:14px 56px;
-      display:flex;align-items:center;justify-content:space-between;
-      color:#fff;
-    }
-    .brand{display:flex;align-items:center;gap:14px}
-    .brand-text .name{font-weight:700;letter-spacing:1px}
-    .brand-text .sub{font-size:12px;letter-spacing:3px;opacity:.8}
-
-    section{padding:120px 64px}
-
-    /* HERO – WATER TREATMENT PLANT */
-    .hero{
-      height:100vh;color:#fff;display:flex;align-items:center;
-      background:
-        linear-gradient(rgba(11,28,45,.75),rgba(11,28,45,.75)),
-        url('https://images.unsplash.com/photo-1604335399105-2b6b8b1a9b5a') center/cover no-repeat;
-    }
-    .hero h1{font-size:54px;max-width:900px}
-    .hero p{font-size:20px;max-width:720px;margin-top:24px}
-
-    /* TRUST – WATER INFRASTRUCTURE IN FMCG */
-    .trust{
-      background:
-        linear-gradient(rgba(255,255,255,.95),rgba(255,255,255,.95)),
-        url('https://images.unsplash.com/photo-1624555130581-1d9cca783bc0') center/cover no-repeat;
-      text-align:center;
-    }
-
-    /* SOLUTIONS – RO / FILTRATION SYSTEMS */
-    .solutions{
-      background:
-        linear-gradient(rgba(255,255,255,.96),rgba(255,255,255,.96)),
-        url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc') center/cover no-repeat;
-    }
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:40px}
-    .card{background:#fff;padding:42px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
-
-    /* EXECUTION – CONTROL ROOM */
-    .process{
-      color:#fff;
-      background:
-        linear-gradient(rgba(7,18,31,.9),rgba(7,18,31,.9)),
-        url('https://images.unsplash.com/photo-1581092334651-ddf26d9a09d1') center/cover no-repeat;
-    }
-    .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;margin-top:40px;text-align:center}
-
-    /* EXPERIENCE – WATER RECYCLING */
-    .experience{
-      background:
-        linear-gradient(rgba(255,255,255,.95),rgba(255,255,255,.95)),
-        url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf') center/cover no-repeat;
-    }
-
-    /* CONTACT – WATER TEXTURE */
-    .contact{
-      color:#fff;
-      background:
-        linear-gradient(135deg,#0b1c2d,#1f6fd6),
-        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd') center/cover no-repeat;
-      display:grid;grid-template-columns:1fr 1fr;gap:60px
-    }
-
-    footer{background:#040b13;color:#aaa;text-align:center;padding:40px}
-
-    @media(max-width:900px){
-      section{padding:80px 32px}
-      .grid,.steps,.contact{grid-template-columns:1fr}
-      .hero h1{font-size:36px}
-    }
-  </style>
+<style>
+:root{
+  --navy:#0b1c2d;
+  --blue:#1f6fd6;
+  --light:#f4f8fb;
+  --border:#e4e9ef;
+}
+body{
+  margin:0;
+  font-family:Inter,sans-serif;
+  color:#0b1c2d;
+  line-height:1.7;
+  background:#fff;
+}
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  padding:16px 56px;
+  display:flex;
+  align-items:center;
+  z-index:1000;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.brand-text .name{
+  font-weight:700;
+  letter-spacing:1px;
+}
+.brand-text .sub{
+  font-size:12px;
+  letter-spacing:3px;
+  opacity:.6;
+}
+section{
+  padding:120px 64px;
+}
+.hero{
+  padding-top:160px;
+}
+.hero h1{
+  font-size:52px;
+  max-width:900px;
+}
+.hero p{
+  font-size:20px;
+  max-width:720px;
+  margin-top:20px;
+}
+.trust{
+  background:var(--light);
+  text-align:center;
+}
+.trust p{
+  max-width:900px;
+  margin:auto;
+}
+.solutions .grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:32px;
+  margin-top:40px;
+}
+.card{
+  border:1px solid var(--border);
+  padding:36px;
+  border-radius:10px;
+}
+.process{
+  background:#eef5fb;
+}
+.steps{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:24px;
+  margin-top:40px;
+}
+.step{
+  background:#fff;
+  padding:24px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  text-align:center;
+}
+.experience{
+  text-align:center;
+}
+.experience p{
+  max-width:800px;
+  margin:auto;
+}
+.contact{
+  background:var(--navy);
+  color:#fff;
+}
+.contact-box{
+  max-width:900px;
+}
+footer{
+  background:#060e16;
+  color:#aaa;
+  text-align:center;
+  padding:32px;
+}
+@media(max-width:900px){
+  section{padding:80px 32px}
+  .solutions .grid,.steps{grid-template-columns:1fr}
+  .hero h1{font-size:36px}
+}
+</style>
 </head>
 
 <body>
@@ -94,16 +130,20 @@
 <header>
   <div class="brand">
     <!-- Guardian Flow Logo -->
-    <svg width="44" height="44" viewBox="0 0 240 240">
+    <svg width="42" height="42" viewBox="0 0 240 240">
       <defs>
-        <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stop-color="#1F6FD6"/>
           <stop offset="100%" stop-color="#2EC4B6"/>
         </linearGradient>
       </defs>
-      <path d="M120 24 C158 30 186 44 186 44 V118 C186 154 154 182 120 204 C86 182 54 154 54 118 V44 C54 44 82 30 120 24 Z"
-            fill="url(#g1)" stroke="#0B1C2D" stroke-width="8"/>
-      <path d="M78 130 C95 95,145 95,162 130 C150 112,120 110,120 145"
+      <path d="M120 24 C158 30 186 44 186 44 V118
+               C186 154 154 182 120 204
+               C86 182 54 154 54 118
+               V44 C54 44 82 30 120 24 Z"
+            fill="url(#g)" stroke="#0B1C2D" stroke-width="8"/>
+      <path d="M78 130 C95 95,145 95,162 130
+               C150 112,120 110,120 145"
             fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
     </svg>
     <div class="brand-text">
@@ -114,15 +154,19 @@
 </header>
 
 <section class="hero">
-  <div>
-    <h1>Engineering Water Treatment Systems for Large FMCG Operations</h1>
-    <p>End-to-end water & wastewater solutions for beverage, FMCG and manufacturing plants.</p>
-  </div>
+  <h1>Engineering Water Treatment Systems for Large FMCG Operations</h1>
+  <p>
+    End-to-end industrial water and wastewater treatment solutions
+    for beverage, FMCG, and large manufacturing facilities.
+  </p>
 </section>
 
 <section class="trust">
   <h2>Trusted Water Treatment Partner</h2>
-  <p>Supporting global beverage manufacturers, FMCG companies and conglomerates across South Asia.</p>
+  <p>
+    Supporting global beverage manufacturers, FMCG companies and conglomerates
+    with reliable, compliant, and scalable water treatment systems.
+  </p>
 </section>
 
 <section class="solutions">
@@ -140,26 +184,31 @@
 <section class="process">
   <h2>Execution Approach</h2>
   <div class="steps">
-    <div>Water Audit</div>
-    <div>Engineering</div>
-    <div>Fabrication</div>
-    <div>Commissioning</div>
-    <div>O&M</div>
+    <div class="step">Water Audit</div>
+    <div class="step">Engineering</div>
+    <div class="step">Fabrication</div>
+    <div class="step">Commissioning</div>
+    <div class="step">O&M</div>
   </div>
 </section>
 
 <section class="experience">
   <h2>Project Experience</h2>
-  <p>Large-scale water treatment and reuse projects for global FMCG operations.</p>
+  <p>
+    Delivered large-scale water treatment, reuse, and compliance-driven projects
+    for global FMCG and beverage operations across South Asia.
+  </p>
 </section>
 
 <section class="contact">
-  <div>
+  <div class="contact-box">
     <h2>Contact</h2>
-    <p><strong>Mr. Raman Krishnamurthy</strong><br/>
-       W 27, N Main Rd,<br/>
-       Anna Nagar West Extension,<br/>
-       Chennai – 600101</p>
+    <p><strong>Mr. Raman Krishnamurthy</strong></p>
+    <p>
+      W 27, N Main Rd,<br/>
+      Anna Nagar West Extension,<br/>
+      Chennai – 600101
+    </p>
   </div>
 </section>
 
