@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Welcon Equipments | Industrial Water Treatment</title>
+<title>Welcon Equipments | Industrial Water Treatment for FMCG</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -14,6 +14,7 @@
   --light:#f6f8fb;
   --border:#e3e8ee;
 }
+
 body{
   margin:0;
   font-family:Inter,sans-serif;
@@ -21,6 +22,8 @@ body{
   background:#fff;
   line-height:1.7;
 }
+
+/* HEADER */
 header{
   position:fixed;
   top:0;
@@ -30,68 +33,128 @@ header{
   padding:18px 56px;
   z-index:1000;
 }
+
 .brand{
   display:flex;
   align-items:center;
   gap:14px;
 }
+
 .brand-text .name{
   font-weight:700;
   letter-spacing:1px;
 }
+
 .brand-text .sub{
   font-size:12px;
   letter-spacing:3px;
   opacity:.6;
 }
+
+/* SECTIONS */
 section{
   padding:120px 64px;
 }
+
 .section-light{background:#fff;}
 .section-grey{background:var(--light);}
+
+.hero{
+  padding-top:160px;
+}
+
 .topic{
   font-size:13px;
   letter-spacing:3px;
   font-weight:600;
   margin-bottom:12px;
 }
-h1{font-size:52px;max-width:900px;}
-h2{font-size:32px;margin-bottom:12px;}
-p{max-width:800px;}
 
-.hero{
-  padding-top:160px;
+h1{
+  font-size:52px;
+  max-width:900px;
 }
 
+h2{
+  font-size:32px;
+  margin-bottom:12px;
+}
+
+p{
+  max-width:800px;
+}
+
+/* GRID & CARDS */
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:32px;
   margin-top:48px;
 }
+
 .card{
   background:#fff;
   border:1px solid var(--border);
   border-radius:10px;
   padding:36px;
 }
+
+/* EXECUTION STEPS */
 .steps{
   display:grid;
   grid-template-columns:repeat(5,1fr);
   gap:24px;
   margin-top:48px;
 }
+
 .step{
-  border:1px solid var(--border);
   background:#fff;
-  padding:24px;
+  border:1px solid var(--border);
   border-radius:10px;
+  padding:24px;
   text-align:center;
 }
+
+/* CLIENT CAROUSEL */
+.client-carousel{
+  overflow:hidden;
+  margin-top:40px;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  padding:32px 0;
+}
+
+.carousel-track{
+  display:flex;
+  gap:80px;
+  width:max-content;
+  animation:scroll 20s linear infinite;
+  align-items:center;
+}
+
+.carousel-track img{
+  height:48px;
+  opacity:.75;
+  filter:grayscale(100%);
+  transition:.3s;
+}
+
+.carousel-track img:hover{
+  opacity:1;
+  filter:none;
+}
+
+@keyframes scroll{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+
+/* CONTACT */
 .contact{
   background:var(--navy);
   color:#fff;
 }
+
 footer{
   background:#060e16;
   color:#aaa;
@@ -99,6 +162,7 @@ footer{
   padding:32px;
 }
 
+/* RESPONSIVE */
 @media(max-width:900px){
   section{padding:80px 32px}
   .grid,.steps{grid-template-columns:1fr}
@@ -128,6 +192,7 @@ footer{
                C150 112,120 110,120 145"
             fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
     </svg>
+
     <div class="brand-text">
       <div class="name">WELCON</div>
       <div class="sub">EQUIPMENTS</div>
@@ -148,12 +213,27 @@ footer{
 <!-- WHO WE SERVE -->
 <section class="section-grey">
   <div class="topic">WHO WE SERVE</div>
-  <h2>Trusted Water Treatment Partner</h2>
+  <h2>Trusted by Leading FMCG & Conglomerates</h2>
   <p>
-    Welcon Equipments supports global beverage manufacturers,
-    large FMCG companies, and diversified conglomerates
-    with reliable and compliant water treatment systems.
+    Welcon Equipments has delivered water treatment solutions for
+    large-scale FMCG manufacturers and diversified conglomerates
+    across India and South Asia.
   </p>
+
+  <div class="client-carousel">
+    <div class="carousel-track">
+      <img src="cocacola.svg" alt="Global Beverage Company">
+      <img src="pepsico.svg" alt="FMCG Company">
+      <img src="bisleri.svg" alt="Packaged Water Brand">
+      <img src="reliance.svg" alt="Indian Conglomerate">
+
+      <!-- duplicate for smooth loop -->
+      <img src="cocacola.svg" alt="">
+      <img src="pepsico.svg" alt="">
+      <img src="bisleri.svg" alt="">
+      <img src="reliance.svg" alt="">
+    </div>
+  </div>
 </section>
 
 <!-- SOLUTIONS -->
@@ -206,7 +286,9 @@ footer{
   </p>
 </section>
 
-<footer>© 2026 Welcon Equipments</footer>
+<footer>
+  © 2026 Welcon Equipments. All rights reserved.
+</footer>
 
 </body>
 </html>
