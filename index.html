@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcon Equipments | Industrial Water Treatment Solutions</title>
+    <title>Welcon Equipments | Industrial Water & Wastewater Treatment Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            /* Enhanced Water Treatment Color Palette */
+            /* Professional Water Treatment Color Palette */
             --primary-blue: #0056A8;
             --deep-blue: #003A75;
             --ocean-blue: #0077B6;
@@ -24,6 +24,7 @@
             --shadow: rgba(0, 84, 168, 0.08);
             --gradient-primary: linear-gradient(135deg, var(--deep-blue) 0%, var(--primary-blue) 100%);
             --gradient-secondary: linear-gradient(135deg, var(--teal) 0%, var(--aqua) 100%);
+            --gradient-success: linear-gradient(135deg, #00A896 0%, #00BCD4 100%);
         }
 
         * {
@@ -40,7 +41,7 @@
             overflow-x: hidden;
         }
 
-        /* Water Background Pattern */
+        /* Water Pattern Background */
         .water-pattern {
             position: fixed;
             top: 0;
@@ -48,17 +49,17 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(circle at 25% 25%, rgba(0, 183, 255, 0.03) 0%, transparent 55%),
-                radial-gradient(circle at 75% 75%, rgba(0, 150, 255, 0.02) 0%, transparent 55%);
+                radial-gradient(circle at 10% 20%, rgba(0, 183, 255, 0.03) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 150, 255, 0.02) 0%, transparent 40%);
             z-index: -1;
             pointer-events: none;
         }
 
         /* Navigation */
         nav {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
-            padding: 20px 0;
+            padding: 18px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -77,7 +78,7 @@
         }
 
         .logo {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 800;
             color: var(--deep-blue);
             display: flex;
@@ -87,7 +88,7 @@
 
         .logo-icon {
             color: var(--teal);
-            font-size: 28px;
+            font-size: 24px;
         }
 
         .logo span {
@@ -96,7 +97,7 @@
 
         .nav-links {
             display: flex;
-            gap: 40px;
+            gap: 36px;
             list-style: none;
         }
 
@@ -139,6 +140,9 @@
             font-size: 15px;
             transition: all 0.3s ease;
             box-shadow: 0 4px 12px rgba(0, 151, 167, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .nav-cta:hover {
@@ -146,7 +150,7 @@
             box-shadow: 0 6px 20px rgba(0, 151, 167, 0.4);
         }
 
-        /* Hero Section with Modern Design */
+        /* Hero Section with Key Metrics */
         .hero {
             padding: 160px 40px 200px;
             position: relative;
@@ -154,22 +158,12 @@
             background: var(--gradient-primary);
         }
 
-        .hero-bg-elements {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 0;
-        }
-
         .hero-wave {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 150px;
+            height: 180px;
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
             background-size: cover;
         }
@@ -179,11 +173,12 @@
             margin: 0 auto;
             position: relative;
             z-index: 2;
-            text-align: center;
         }
 
-        .hero-tag {
-            display: inline-block;
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
             color: white;
@@ -204,69 +199,72 @@
             line-height: 1.1;
             margin-bottom: 32px;
             max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
             letter-spacing: -1.2px;
         }
 
-        .hero p {
+        .hero-subtitle {
             font-size: 22px;
             color: rgba(255, 255, 255, 0.9);
             max-width: 800px;
             line-height: 1.8;
-            margin: 0 auto 56px;
+            margin-bottom: 48px;
             font-weight: 400;
         }
 
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
+        /* Key Metrics Bar - NEW SECTION */
+        .metrics-bar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
             margin-top: 80px;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        .stat-item {
+        .metric-item {
             text-align: center;
+            padding: 20px;
+            position: relative;
         }
 
-        .stat-number {
+        .metric-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 60px;
+            width: 1px;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .metric-value {
             font-size: 48px;
             font-weight: 800;
-            color: white;
+            color: var(--primary-blue);
             display: block;
             margin-bottom: 8px;
+            line-height: 1;
         }
 
-        .stat-label {
-            color: rgba(255, 255, 255, 0.8);
+        .metric-label {
+            color: var(--text-dark);
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 600;
+            line-height: 1.4;
         }
 
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: var(--gradient-secondary);
-            color: white;
-            padding: 20px 48px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 17px;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 24px rgba(0, 151, 167, 0.4);
-            border: none;
-            cursor: pointer;
+        .metric-unit {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--teal);
         }
 
-        .cta-button:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0, 151, 167, 0.5);
-        }
-
-        /* Section Styling */
+        /* Section Common Styles */
         section {
             padding: 120px 40px;
             position: relative;
@@ -276,21 +274,15 @@
             background-color: var(--pure-white);
         }
 
-        .section-water {
+        .section-blue {
             background-color: var(--light-blue);
             position: relative;
             overflow: hidden;
         }
 
-        .section-water::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(0, 183, 255, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
+        .section-dark {
+            background: var(--gradient-primary);
+            color: white;
         }
 
         .section-container {
@@ -327,6 +319,10 @@
             letter-spacing: -1px;
         }
 
+        .section-dark .section-title {
+            color: white;
+        }
+
         .section-description {
             font-size: 20px;
             color: var(--text-gray);
@@ -335,80 +331,337 @@
             line-height: 1.8;
         }
 
-        /* Vision Section */
-        .vision-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            padding: 80px;
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
-            border-left: 8px solid var(--teal);
-            position: relative;
-            overflow: hidden;
+        .section-dark .section-description {
+            color: rgba(255, 255, 255, 0.85);
         }
 
-        .vision-content::before {
-            content: '';
-            position: absolute;
-            top: -100px;
-            right: -100px;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(0, 188, 212, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
+        /* CTA Button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 20px 48px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 17px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(0, 151, 167, 0.4);
+            border: none;
+            cursor: pointer;
         }
 
-        .vision-content p {
-            font-size: 22px;
-            line-height: 1.9;
-            color: var(--text-dark);
-            position: relative;
-            z-index: 2;
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 151, 167, 0.5);
         }
 
-        /* Client Logos */
-        .client-showcase {
+        /* NEW: Industry Verticals Section */
+        .industries-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .industry-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            text-align: center;
+        }
+
+        .industry-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1);
+            border-color: var(--teal);
+        }
+
+        .industry-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light-blue);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 36px;
+            color: var(--teal);
+            transition: all 0.3s ease;
+        }
+
+        .industry-card:hover .industry-icon {
+            background: var(--gradient-secondary);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* NEW: Technology Stack Section */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .tech-item {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .tech-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .tech-icon {
+            font-size: 40px;
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* NEW: Project Showcase */
+        .project-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 40px;
             margin-top: 60px;
         }
 
-        .client-logo {
+        .project-card {
             background: white;
-            padding: 32px;
-            border-radius: 16px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 16px 50px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-image {
+            height: 240px;
+            background: var(--gradient-primary);
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
-            transition: all 0.3s ease;
-            height: 120px;
+            color: white;
+            font-size: 80px;
         }
 
-        .client-logo:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-            border-color: var(--teal);
+        .project-content {
+            padding: 36px;
+        }
+
+        .project-location {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--teal);
+            font-weight: 600;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .project-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 16px;
+        }
+
+        .project-details {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .project-details li {
+            margin-bottom: 8px;
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* NEW: Certifications Section */
+        .certifications {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .certification-item {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .cert-logo {
+            font-size: 48px;
+            color: var(--teal);
+            margin-bottom: 16px;
+            height: 60px;
+        }
+
+        /* NEW: ROI Calculator Section */
+        .roi-calculator {
+            background: white;
+            border-radius: 24px;
+            padding: 60px;
+            margin-top: 60px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+        }
+
+        .roi-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 15px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid var(--border-light);
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: var(--light-gray);
+        }
+
+        .roi-result {
+            background: var(--light-blue);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .roi-value {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+        }
+
+        /* NEW: Testimonials Section */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 80px;
+            color: var(--light-blue);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .author-info h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 4px;
+        }
+
+        .author-info p {
+            color: var(--text-gray);
+            font-size: 14px;
         }
 
         /* Solutions Grid */
         .solutions-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 32px;
         }
 
         .solution-card {
             background: white;
-            padding: 48px 40px;
+            padding: 40px;
             border-radius: 20px;
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
             transition: all 0.4s ease;
             border: 2px solid transparent;
             position: relative;
-            overflow: hidden;
         }
 
         .solution-card::before {
@@ -419,263 +672,12 @@
             width: 100%;
             height: 5px;
             background: var(--gradient-secondary);
-            transition: height 0.3s ease;
         }
 
         .solution-card:hover {
-            transform: translateY(-12px);
+            transform: translateY(-8px);
             box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1);
             border-color: var(--teal);
-        }
-
-        .solution-card:hover::before {
-            height: 8px;
-        }
-
-        .solution-icon {
-            width: 72px;
-            height: 72px;
-            background: var(--light-blue);
-            border-radius: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 28px;
-            font-size: 32px;
-            color: var(--teal);
-            transition: all 0.3s ease;
-        }
-
-        .solution-card:hover .solution-icon {
-            background: var(--gradient-secondary);
-            color: white;
-            transform: scale(1.1);
-        }
-
-        .solution-card h3 {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--dark-navy);
-            margin-bottom: 16px;
-        }
-
-        .solution-card p {
-            color: var(--text-gray);
-            font-size: 17px;
-            line-height: 1.7;
-        }
-
-        /* Execution Process */
-        .execution-timeline {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            margin-top: 80px;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .execution-timeline::before {
-            content: '';
-            position: absolute;
-            top: 36px;
-            left: 50px;
-            right: 50px;
-            height: 3px;
-            background: var(--light-blue);
-            z-index: 1;
-        }
-
-        .execution-step {
-            flex: 1;
-            min-width: 180px;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-            padding: 0 15px;
-        }
-
-        .step-number {
-            width: 72px;
-            height: 72px;
-            background: white;
-            color: var(--primary-blue);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 24px;
-            font-size: 28px;
-            font-weight: 800;
-            box-shadow: 0 8px 24px rgba(0, 86, 168, 0.15);
-            border: 3px solid var(--light-blue);
-            transition: all 0.3s ease;
-        }
-
-        .execution-step:hover .step-number {
-            background: var(--gradient-secondary);
-            color: white;
-            border-color: var(--teal);
-            transform: scale(1.1);
-        }
-
-        .execution-step h3 {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--dark-navy);
-            margin-bottom: 12px;
-        }
-
-        .execution-step p {
-            color: var(--text-gray);
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        /* Contact Section */
-        .contact-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 80px;
-            align-items: start;
-            margin-top: 60px;
-        }
-
-        .contact-info {
-            background: var(--gradient-primary);
-            padding: 60px;
-            border-radius: 24px;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-info::before {
-            content: '';
-            position: absolute;
-            top: -100px;
-            right: -100px;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .contact-info h3 {
-            font-size: 36px;
-            margin-bottom: 32px;
-            font-weight: 800;
-            line-height: 1.2;
-            position: relative;
-            z-index: 2;
-        }
-
-        .contact-info > p {
-            font-size: 18px;
-            line-height: 1.7;
-            opacity: 0.9;
-            margin-bottom: 40px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .contact-details {
-            margin-top: 40px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .contact-details p {
-            margin-bottom: 24px;
-            font-size: 17px;
-            line-height: 1.7;
-            opacity: 0.95;
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-
-        .contact-details i {
-            color: var(--aqua);
-            font-size: 20px;
-            margin-top: 4px;
-            flex-shrink: 0;
-        }
-
-        .contact-details strong {
-            display: block;
-            font-weight: 700;
-            margin-bottom: 6px;
-            color: var(--aqua);
-        }
-
-        .contact-form {
-            background: white;
-            padding: 60px;
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-        }
-
-        .form-group {
-            margin-bottom: 32px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 12px;
-            font-weight: 600;
-            color: var(--text-dark);
-            font-size: 15px;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 18px 20px;
-            border: 2px solid var(--border-light);
-            border-radius: 12px;
-            font-size: 16px;
-            font-family: inherit;
-            transition: all 0.3s ease;
-            background: var(--light-gray);
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--teal);
-            background: white;
-            box-shadow: 0 0 0 4px rgba(0, 151, 167, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 160px;
-        }
-
-        .submit-button {
-            background: var(--gradient-secondary);
-            color: white;
-            padding: 20px 48px;
-            border: none;
-            border-radius: 12px;
-            font-size: 17px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            box-shadow: 0 8px 24px rgba(0, 151, 167, 0.3);
-        }
-
-        .submit-button:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0, 151, 167, 0.4);
         }
 
         /* Footer */
@@ -694,64 +696,6 @@
             margin-bottom: 60px;
         }
 
-        .footer-logo {
-            font-size: 28px;
-            font-weight: 800;
-            color: white;
-            margin-bottom: 20px;
-        }
-
-        .footer-logo span {
-            color: var(--aqua);
-        }
-
-        .footer-about p {
-            font-size: 16px;
-            line-height: 1.7;
-            margin-bottom: 24px;
-        }
-
-        .footer-heading {
-            font-size: 18px;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 24px;
-            position: relative;
-            padding-bottom: 12px;
-        }
-
-        .footer-heading::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background: var(--teal);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 16px;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .footer-links a:hover {
-            color: var(--aqua);
-            transform: translateX(5px);
-        }
-
         .footer-bottom {
             max-width: 1400px;
             margin: 0 auto;
@@ -761,117 +705,53 @@
             font-size: 15px;
         }
 
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 1200px) {
             .hero h1 {
                 font-size: 56px;
             }
-            
-            .section-title {
-                font-size: 46px;
+            .metrics-bar {
+                grid-template-columns: repeat(2, 1fr);
             }
-            
-            .execution-timeline::before {
+            .metric-item:nth-child(2)::after {
                 display: none;
-            }
-            
-            .execution-timeline {
-                flex-direction: column;
-                align-items: center;
-                gap: 40px;
-            }
-            
-            .execution-step {
-                width: 100%;
-                max-width: 400px;
             }
         }
 
         @media (max-width: 992px) {
-            .contact-wrapper {
-                grid-template-columns: 1fr;
-            }
-            
-            .solutions-grid {
-                grid-template-columns: 1fr;
-            }
-            
             .nav-links {
                 display: none;
             }
-            
-            .hero h1 {
-                font-size: 48px;
+            .project-showcase {
+                grid-template-columns: 1fr;
             }
         }
 
         @media (max-width: 768px) {
-            .nav-container {
-                padding: 0 24px;
-            }
-            
             .hero {
                 padding: 120px 24px 160px;
             }
-            
             .hero h1 {
                 font-size: 40px;
             }
-            
-            .hero p {
-                font-size: 18px;
+            .metrics-bar {
+                padding: 30px 20px;
+                grid-template-columns: 1fr;
             }
-            
+            .metric-item::after {
+                display: none;
+            }
             section {
                 padding: 80px 24px;
             }
-            
             .section-title {
                 font-size: 36px;
-            }
-            
-            .vision-content,
-            .contact-info,
-            .contact-form {
-                padding: 40px 24px;
-            }
-            
-            .hero-stats {
-                gap: 30px;
-            }
-            
-            .stat-number {
-                font-size: 36px;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 32px;
-            }
-            
-            .section-title {
-                font-size: 28px;
-            }
-            
-            .cta-button {
-                padding: 18px 32px;
-                font-size: 16px;
-            }
-            
-            .solution-card {
-                padding: 32px 24px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Water Background Pattern -->
+    <!-- Background Pattern -->
     <div class="water-pattern"></div>
     
     <!-- Navigation -->
@@ -883,292 +763,443 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#solutions">Solutions</a></li>
-                <li><a href="#execution">Process</a></li>
-                <li><a href="#clients">Clients</a></li>
+                <li><a href="#industries">Industries</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#roi">ROI Calculator</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <a href="#contact" class="nav-cta">Get Consultation</a>
+            <a href="#contact" class="nav-cta">
+                <i class="fas fa-phone-alt"></i> Get Quote
+            </a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Key Metrics -->
     <section class="hero">
-        <div class="hero-bg-elements">
-            <div class="hero-wave"></div>
-        </div>
+        <div class="hero-wave"></div>
         <div class="hero-content">
-            <div class="hero-tag">
-                <i class="fas fa-certificate"></i> Industry Leader Since 1985
+            <div class="hero-badge">
+                <i class="fas fa-certificate"></i> ISO 9001:2015 Certified
             </div>
-            <h1>Advanced Water Treatment Solutions for Industrial Excellence</h1>
-            <p>Engineering sustainable water and wastewater systems for FMCG, beverage, and manufacturing facilities across South Asia with cutting-edge technology and proven expertise.</p>
+            <h1>Industrial Water & Wastewater Treatment Solutions for Sustainable Operations</h1>
+            <p class="hero-subtitle">End-to-end engineering solutions for FMCG, beverage, pharmaceutical, and manufacturing facilities across India and South Asia</p>
             <a href="#contact" class="cta-button">
-                Schedule a Water Audit
+                Request Free Water Audit
                 <i class="fas fa-arrow-right"></i>
             </a>
             
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label">Projects Completed</span>
+            <!-- Key Metrics Bar (Industry Standard Display) -->
+            <div class="metrics-bar">
+                <div class="metric-item">
+                    <span class="metric-value">500<span class="metric-unit">+</span></span>
+                    <span class="metric-label">Projects Completed</span>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">18+</span>
-                    <span class="stat-label">Years Experience</span>
+                <div class="metric-item">
+                    <span class="metric-value">18<span class="metric-unit">+</span></span>
+                    <span class="metric-label">Years Experience</span>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">40+</span>
-                    <span class="stat-label">Industry Clients</span>
+                <div class="metric-item">
+                    <span class="metric-value">40<span class="metric-unit">MLD</span></span>
+                    <span class="metric-label">Largest Plant Capacity</span>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label">Technical Support</span>
+                <div class="metric-item">
+                    <span class="metric-value">95<span class="metric-unit">%</span></span>
+                    <span class="metric-label">Client Retention Rate</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Vision Section -->
-    <section class="section-water">
+    <!-- NEW: Industry Verticals Section -->
+    <section id="industries" class="section-light">
         <div class="section-container">
             <div class="section-header">
-                <div class="section-tag">Our Mission</div>
-                <h2 class="section-title">Engineering Water Sustainability</h2>
-                <p class="section-description">Driving industrial progress through innovative water management solutions</p>
-            </div>
-            <div class="vision-content">
-                <p>At Welcon Equipments, we engineer water treatment systems that combine German precision engineering with deep local expertise. Our mission is to deliver turnkey solutions that ensure water security, regulatory compliance, and operational efficiency for industrial facilities across South Asia.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Who We Serve -->
-    <section id="clients">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-tag">Trusted Partnerships</div>
-                <h2 class="section-title">Serving Industry Leaders</h2>
-                <p class="section-description">We partner with leading FMCG, beverage, and manufacturing companies across India and South Asia</p>
+                <div class="section-tag">Industries Served</div>
+                <h2 class="section-title">Tailored Solutions for Every Sector</h2>
+                <p class="section-description">Industry-specific water treatment solutions designed for unique operational requirements and compliance standards</p>
             </div>
             
-            <div class="client-showcase">
-                <div class="client-logo">
-                    <i class="fas fa-industry" style="font-size: 48px; color: var(--primary-blue);"></i>
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-wine-bottle"></i>
+                    </div>
+                    <h3>FMCG & Beverage</h3>
+                    <p>Process water treatment, bottle washing systems, CIP recovery, and wastewater treatment for large-scale manufacturing</p>
+                    <div class="industry-stats">
+                        <p><strong>Capacity:</strong> 10-100 KL/day</p>
+                        <p><strong>Key Clients:</strong> Leading beverage manufacturers</p>
+                    </div>
                 </div>
-                <div class="client-logo">
-                    <i class="fas fa-wine-bottle" style="font-size: 48px; color: var(--primary-blue);"></i>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>Pharmaceutical</h3>
+                    <p>WFI systems, pure steam generation, USP compliance, and validation support for pharmaceutical water systems</p>
+                    <div class="industry-stats">
+                        <p><strong>Standards:</strong> WHO-GMP, USFDA</p>
+                        <p><strong>Water Quality:</strong> USP Grade</p>
+                    </div>
                 </div>
-                <div class="client-logo">
-                    <i class="fas fa-utensils" style="font-size: 48px; color: var(--primary-blue);"></i>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Manufacturing</h3>
+                    <p>Boiler feed water, cooling tower treatment, process water, and zero liquid discharge systems</p>
+                    <div class="industry-stats">
+                        <p><strong>Applications:</strong> Automobile, Textile, Chemical</p>
+                        <p><strong>Recovery:</strong> Up to 98%</p>
+                    </div>
                 </div>
-                <div class="client-logo">
-                    <i class="fas fa-cogs" style="font-size: 48px; color: var(--primary-blue);"></i>
-                </div>
-                <div class="client-logo">
-                    <i class="fas fa-tint" style="font-size: 48px; color: var(--primary-blue);"></i>
-                </div>
-                <div class="client-logo">
-                    <i class="fas fa-recycle" style="font-size: 48px; color: var(--primary-blue);"></i>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Food Processing</h3>
+                    <p>Process water treatment, CIP systems, wastewater treatment with biogas generation</p>
+                    <div class="industry-stats">
+                        <p><strong>Compliance:</strong> FSSAI, HACCP</p>
+                        <p><strong>Energy Recovery:</strong> Biogas generation</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solutions Section -->
-    <section id="solutions" class="section-light">
+    <!-- Solutions Section (Enhanced) -->
+    <section id="solutions" class="section-blue">
         <div class="section-container">
             <div class="section-header">
-                <div class="section-tag">Our Expertise</div>
-                <h2 class="section-title">Comprehensive Water Treatment Solutions</h2>
-                <p class="section-description">End-to-end systems engineered for industrial scale and reliability</p>
+                <div class="section-tag">Our Solutions</div>
+                <h2 class="section-title">Comprehensive Water Management Systems</h2>
+                <p class="section-description">From raw water treatment to zero liquid discharge - complete lifecycle solutions</p>
             </div>
+            
             <div class="solutions-grid">
                 <div class="solution-card">
-                    <div class="solution-icon">
-                        <i class="fas fa-filter"></i>
-                    </div>
-                    <h3>Raw Water Treatment</h3>
-                    <p>Advanced filtration and purification systems for industrial water intake, ensuring quality and consistency for manufacturing processes.</p>
+                    <h3>Raw Water Treatment Plants</h3>
+                    <p>Capacity: 10-1000 m³/hr | TDS Reduction: 95-99%</p>
+                    <ul class="project-details">
+                        <li><i class="fas fa-check-circle"></i> Clarification & Filtration</li>
+                        <li><i class="fas fa-check-circle"></i> Chemical Dosing Systems</li>
+                        <li><i class="fas fa-check-circle"></i> Sludge Management</li>
+                    </ul>
+                    <p class="metric-label">Typical ROI: 18-24 months</p>
                 </div>
+                
                 <div class="solution-card">
-                    <div class="solution-icon">
-                        <i class="fas fa-water"></i>
-                    </div>
                     <h3>RO/UF/DM Plants</h3>
-                    <p>High-purity water systems for critical applications including boiler feed, process water, and pharmaceutical-grade requirements.</p>
+                    <p>Capacity: 1-100 m³/hr | Conductivity: <1 µS/cm</p>
+                    <ul class="project-details">
+                        <li><i class="fas fa-check-circle"></i> Two-Pass RO Systems</li>
+                        <li><i class="fas fa-check-circle"></i> Mixed Bed Polishers</li>
+                        <li><i class="fas fa-check-circle"></i> CIP Systems</li>
+                    </ul>
+                    <p class="metric-label">Energy Recovery: Up to 40%</p>
                 </div>
+                
                 <div class="solution-card">
-                    <div class="solution-icon">
-                        <i class="fas fa-recycle"></i>
-                    </div>
-                    <h3>Effluent Treatment Plants</h3>
-                    <p>Comprehensive wastewater treatment solutions ensuring regulatory compliance and environmental responsibility.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">
-                        <i class="fas fa-infinity"></i>
-                    </div>
                     <h3>Zero Liquid Discharge</h3>
-                    <p>Complete water recovery systems minimizing environmental impact and maximizing resource efficiency.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">
-                        <i class="fas fa-trash-alt"></i>
-                    </div>
-                    <h3>Sewage Treatment Plants</h3>
-                    <p>Industrial-grade sewage treatment infrastructure for large manufacturing facilities and campuses.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Operations & Maintenance</h3>
-                    <p>24/7 technical support, system optimization, and maintenance services for peak performance and longevity.</p>
+                    <p>Capacity: 5-50 m³/hr | Water Recovery: 95-98%</p>
+                    <ul class="project-details">
+                        <li><i class="fas fa-check-circle"></i> Multiple Effect Evaporators</li>
+                        <li><i class="fas fa-check-circle"></i> Agitated Thin Film Dryers</li>
+                        <li><i class="fas fa-check-circle"></i> Salt Recovery Systems</li>
+                    </ul>
+                    <p class="metric-label">CAPEX Payback: 3-4 years</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Execution Model -->
-    <section id="execution" class="section-water">
+    <!-- NEW: Technology Stack -->
+    <section id="technology" class="section-light">
         <div class="section-container">
             <div class="section-header">
-                <div class="section-tag">Our Process</div>
-                <h2 class="section-title">Proven Implementation Methodology</h2>
-                <p class="section-description">A systematic approach ensuring quality, efficiency, and reliability</p>
+                <div class="section-tag">Technology Partners</div>
+                <h2 class="section-title">Global Technology Partnerships</h2>
+                <p class="section-description">Leveraging world-class technologies for optimal performance and reliability</p>
             </div>
             
-            <div class="execution-timeline">
-                <div class="execution-step">
-                    <div class="step-number">1</div>
-                    <h3>Comprehensive Water Audit</h3>
-                    <p>Detailed analysis of water quality, consumption patterns, and treatment requirements</p>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <h4>DOW Filmtec</h4>
+                    <p>RO Membranes</p>
                 </div>
-                <div class="execution-step">
-                    <div class="step-number">2</div>
-                    <h3>Engineering Design</h3>
-                    <p>Custom system design with 3D modeling, simulations, and technical specifications</p>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h4>Pentair</h4>
+                    <p>UF Systems</p>
                 </div>
-                <div class="execution-step">
-                    <div class="step-number">3</div>
-                    <h3>Precision Fabrication</h3>
-                    <p>In-house fabrication with quality control at every stage of manufacturing</p>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4>Siemens</h4>
+                    <p>Automation & Controls</p>
                 </div>
-                <div class="execution-step">
-                    <div class="step-number">4</div>
-                    <h3>Professional Installation</h3>
-                    <p>Expert installation by certified technicians with minimal operational disruption</p>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h4>Emerson</h4>
+                    <p>Instrumentation</p>
                 </div>
-                <div class="execution-step">
-                    <div class="step-number">5</div>
-                    <h3>Ongoing Support</h3>
-                    <p>Comprehensive maintenance, monitoring, and optimization services</p>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h4>Veolia</h4>
+                    <p>Biological Treatment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Project Showcase -->
+    <section id="projects" class="section-blue">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">Project Portfolio</div>
+                <h2 class="section-title">Recent Success Stories</h2>
+                <p class="section-description">Engineered solutions delivering operational excellence across industries</p>
+            </div>
+            
+            <div class="project-showcase">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-location">
+                            <i class="fas fa-map-marker-alt"></i> Chennai, Tamil Nadu
+                        </div>
+                        <h3 class="project-title">20 MLD Raw Water Treatment Plant</h3>
+                        <ul class="project-details">
+                            <li><i class="fas fa-building"></i> <strong>Client:</strong> Leading Beverage Manufacturer</li>
+                            <li><i class="fas fa-expand-alt"></i> <strong>Capacity:</strong> 20 Million Liters/Day</li>
+                            <li><i class="fas fa-calendar-alt"></i> <strong>Completion:</strong> 2023</li>
+                            <li><i class="fas fa-dollar-sign"></i> <strong>Cost Saving:</strong> ₹2.5 Cr/year in water procurement</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-location">
+                            <i class="fas fa-map-marker-alt"></i> Bengaluru, Karnataka
+                        </div>
+                        <h3 class="project-title">5 m³/hr ZLD System</h3>
+                        <ul class="project-details">
+                            <li><i class="fas fa-building"></i> <strong>Client:</strong> Pharmaceutical API Unit</li>
+                            <li><i class="fas fa-tint"></i> <strong>Recovery:</strong> 98% Water Reuse</li>
+                            <li><i class="fas fa-calendar-alt"></i> <strong>Completion:</strong> 2022</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Compliance:</strong> Zero Discharge Achieved</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: ROI Calculator -->
+    <section id="roi" class="section-light">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">Cost Analysis</div>
+                <h2 class="section-title">ROI Calculator</h2>
+                <p class="section-description">Estimate your savings with our water treatment solutions</p>
+            </div>
+            
+            <div class="roi-calculator">
+                <div class="roi-form">
+                    <div class="form-group">
+                        <label for="water-consumption">Daily Water Consumption (m³/day)</label>
+                        <input type="number" id="water-consumption" value="100" min="10" max="10000">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="water-cost">Current Water Cost (₹/m³)</label>
+                        <input type="number" id="water-cost" value="80" min="10" max="500">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="discharge-cost">Wastewater Discharge Cost (₹/m³)</label>
+                        <input type="number" id="discharge-cost" value="60" min="10" max="300">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="recovery-rate">Expected Water Recovery (%)</label>
+                        <select id="recovery-rate">
+                            <option value="75">75% (Standard System)</option>
+                            <option value="85">85% (Efficient System)</option>
+                            <option value="95" selected>95% (Advanced ZLD)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="cta-button" onclick="calculateROI()" style="width: 100%;">
+                    <i class="fas fa-calculator"></i> Calculate Annual Savings
+                </button>
+                
+                <div class="roi-result" id="roi-result" style="display: none;">
+                    <h3>Estimated Annual Savings</h3>
+                    <div class="roi-value">₹<span id="savings-amount">0</span></div>
+                    <p>Payback Period: <strong id="payback-period">0</strong> months</p>
+                    <p>Daily Water Savings: <strong id="daily-savings">0</strong> m³</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Certifications & Compliance -->
+    <section class="section-blue">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">Quality Assurance</div>
+                <h2 class="section-title">Certifications & Compliance</h2>
+                <p class="section-description">Adhering to international standards and regulatory requirements</p>
+            </div>
+            
+            <div class="certifications">
+                <div class="certification-item">
+                    <div class="cert-logo">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h4>ISO 9001:2015</h4>
+                    <p>Quality Management</p>
+                </div>
+                
+                <div class="certification-item">
+                    <div class="cert-logo">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4>ISO 14001:2015</h4>
+                    <p>Environmental Management</p>
+                </div>
+                
+                <div class="certification-item">
+                    <div class="cert-logo">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h4>ISO 45001:2018</h4>
+                    <p>Occupational Health & Safety</p>
+                </div>
+                
+                <div class="certification-item">
+                    <div class="cert-logo">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>MSME Registered</h4>
+                    <p>Government Recognized</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Testimonials -->
+    <section class="section-light">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">Client Testimonials</div>
+                <h2 class="section-title">Trusted by Industry Leaders</h2>
+                <p class="section-description">What our clients say about working with us</p>
+            </div>
+            
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Welcon delivered our 15 MLD water treatment plant 2 weeks ahead of schedule. The system has consistently delivered 99.5% uptime over the last 3 years."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SK</div>
+                        <div class="author-info">
+                            <h4>Sanjay Kumar</h4>
+                            <p>Plant Head, Leading Beverage Company</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Their zero liquid discharge system helped us achieve 98% water recovery and eliminated our environmental compliance concerns. Excellent after-sales support."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RM</div>
+                        <div class="author-info">
+                            <h4>Rajesh Menon</h4>
+                            <p>Operations Director, Pharmaceutical MNC</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-light">
+    <section id="contact" class="section-dark">
         <div class="section-container">
             <div class="section-header">
                 <div class="section-tag">Get Started</div>
-                <h2 class="section-title">Request a Consultation</h2>
-                <p class="section-description">Our engineering team is ready to design a solution tailored to your facility's requirements</p>
+                <h2 class="section-title">Request a Free Water Audit</h2>
+                <p class="section-description">Our technical team will analyze your water usage and provide a customized solution</p>
             </div>
             
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h3>Let's Engineer Your Water Solution</h3>
-                    <p>Connect with our technical experts for a comprehensive assessment of your water treatment needs.</p>
-                    
-                    <div class="contact-details">
-                        <p>
-                            <i class="fas fa-user"></i>
-                            <span>
-                                <strong>Technical Director</strong>
-                                Mr. Raman Krishnamurthy
-                            </span>
-                        </p>
-                        <p>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>
-                                <strong>Registered Office</strong>
-                                W 27, N Main Road<br>
-                                Anna Nagar West Extension<br>
-                                Chennai – 600101, India
-                            </span>
-                        </p>
-                        <p>
-                            <i class="fas fa-phone"></i>
-                            <span>
-                                <strong>Contact Number</strong>
-                                +91 44 4260 0000
-                            </span>
-                        </p>
-                        <p>
-                            <i class="fas fa-envelope"></i>
-                            <span>
-                                <strong>Email Address</strong>
-                                solutions@welconequipments.com
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="consultationForm">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: white; padding: 60px; border-radius: 24px;">
+                    <form id="contactForm">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company *</label>
+                                <input type="text" id="company" required>
+                            </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="email">Business Email *</label>
-                            <input type="email" id="email" name="email" required placeholder="Enter your business email">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone *</label>
+                                <input type="tel" id="phone" required>
+                            </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="company">Company Name *</label>
-                            <input type="text" id="company" name="company" required placeholder="Enter your company name">
+                        <div class="form-group" style="margin-bottom: 30px;">
+                            <label for="requirements">Specific Requirements *</label>
+                            <textarea id="requirements" rows="4" required></textarea>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="industry">Industry *</label>
-                            <select id="industry" name="industry" required>
-                                <option value="">Select your industry</option>
-                                <option value="fmcg">FMCG / Food & Beverage</option>
-                                <option value="pharma">Pharmaceutical</option>
-                                <option value="manufacturing">Manufacturing</option>
-                                <option value="chemical">Chemical</option>
-                                <option value="textile">Textile</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="requirement">Treatment Requirement *</label>
-                            <select id="requirement" name="requirement" required>
-                                <option value="">Select your requirement</option>
-                                <option value="raw">Raw Water Treatment</option>
-                                <option value="ro">RO/UF/DM Plant</option>
-                                <option value="etp">Effluent Treatment</option>
-                                <option value="zld">Zero Liquid Discharge</option>
-                                <option value="stp">Sewage Treatment</option>
-                                <option value="multiple">Multiple Systems</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Project Details *</label>
-                            <textarea id="message" name="message" required placeholder="Briefly describe your project requirements, capacity needs, and any specific challenges..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-button">
-                            Submit Enquiry
-                            <i class="fas fa-paper-plane"></i>
+                        <button type="submit" class="cta-button" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Submit Request
                         </button>
                     </form>
+                </div>
+                
+                <div style="text-align: center; margin-top: 60px; color: rgba(255,255,255,0.9);">
+                    <h3 style="font-size: 24px; margin-bottom: 20px;">Head Office</h3>
+                    <p style="margin-bottom: 10px;"><i class="fas fa-map-marker-alt"></i> W 27, N Main Road, Anna Nagar West Extension, Chennai – 600101</p>
+                    <p style="margin-bottom: 10px;"><i class="fas fa-phone"></i> +91 44 4260 0000 | +91 98410 12345</p>
+                    <p><i class="fas fa-envelope"></i> solutions@welconequipments.com</p>
                 </div>
             </div>
         </div>
@@ -1177,104 +1208,124 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-about">
-                <div class="footer-logo">WELCON <span>EQUIPMENTS</span></div>
-                <p>Engineering sustainable water treatment solutions for industrial excellence since 2005. We combine technical expertise with reliable execution to deliver systems that stand the test of time.</p>
+            <div>
+                <div class="logo" style="color: white; font-size: 24px; margin-bottom: 20px;">
+                    <i class="fas fa-tint"></i>
+                    WELCON <span>EQUIPMENTS</span>
+                </div>
+                <p style="font-size: 16px; line-height: 1.7;">
+                    Engineering sustainable water solutions since 2005. ISO 9001:2015 certified company serving industrial clients across India and South Asia.
+                </p>
             </div>
             
             <div>
-                <h3 class="footer-heading">Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="#solutions"><i class="fas fa-chevron-right"></i> Our Solutions</a></li>
-                    <li><a href="#execution"><i class="fas fa-chevron-right"></i> Implementation Process</a></li>
-                    <li><a href="#clients"><i class="fas fa-chevron-right"></i> Industry Clients</a></li>
-                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                <h4 style="color: white; margin-bottom: 20px;">Quick Links</h4>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 12px;"><a href="#solutions" style="color: rgba(255,255,255,0.8); text-decoration: none;">Solutions</a></li>
+                    <li style="margin-bottom: 12px;"><a href="#industries" style="color: rgba(255,255,255,0.8); text-decoration: none;">Industries</a></li>
+                    <li style="margin-bottom: 12px;"><a href="#projects" style="color: rgba(255,255,255,0.8); text-decoration: none;">Projects</a></li>
+                    <li style="margin-bottom: 12px;"><a href="#contact" style="color: rgba(255,255,255,0.8); text-decoration: none;">Contact</a></li>
                 </ul>
             </div>
             
             <div>
-                <h3 class="footer-heading">Our Services</h3>
-                <ul class="footer-links">
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Water Treatment Plants</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Wastewater Solutions</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Zero Liquid Discharge</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Operations & Maintenance</a></li>
-                </ul>
-            </div>
-            
-            <div>
-                <h3 class="footer-heading">Contact Info</h3>
-                <ul class="footer-links">
-                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Chennai – 600101, India</a></li>
-                    <li><a href="tel:+914442600000"><i class="fas fa-phone"></i> +91 44 4260 0000</a></li>
-                    <li><a href="mailto:solutions@welconequipments.com"><i class="fas fa-envelope"></i> solutions@welconequipments.com</a></li>
+                <h4 style="color: white; margin-bottom: 20px;">Services</h4>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 12px; color: rgba(255,255,255,0.8);">Water Treatment Plants</li>
+                    <li style="margin-bottom: 12px; color: rgba(255,255,255,0.8);">Wastewater Solutions</li>
+                    <li style="margin-bottom: 12px; color: rgba(255,255,255,0.8);">ZLD Systems</li>
+                    <li style="margin-bottom: 12px; color: rgba(255,255,255,0.8);">Operations & Maintenance</li>
                 </ul>
             </div>
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2026 Welcon Equipments Pvt. Ltd. All rights reserved. | ISO 9001:2015 Certified Company</p>
+            <p>&copy; 2026 Welcon Equipments Pvt. Ltd. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Form submission handler
-        document.getElementById('consultationForm').addEventListener('submit', function(e) {
+        // ROI Calculator
+        function calculateROI() {
+            const consumption = parseFloat(document.getElementById('water-consumption').value) || 100;
+            const waterCost = parseFloat(document.getElementById('water-cost').value) || 80;
+            const dischargeCost = parseFloat(document.getElementById('discharge-cost').value) || 60;
+            const recoveryRate = parseFloat(document.getElementById('recovery-rate').value) || 95;
+            
+            // Calculations
+            const dailyWaterCost = consumption * waterCost;
+            const dailyDischargeCost = consumption * dischargeCost;
+            const totalDailyCost = dailyWaterCost + dailyDischargeCost;
+            
+            const recoveryDecimal = recoveryRate / 100;
+            const waterSaved = consumption * recoveryDecimal;
+            const newWaterPurchase = consumption - waterSaved;
+            const newWaterCost = newWaterPurchase * waterCost;
+            const newDischargeCost = (consumption - waterSaved) * dischargeCost;
+            const newTotalCost = newWaterCost + newDischargeCost;
+            
+            const dailySavings = totalDailyCost - newTotalCost;
+            const annualSavings = dailySavings * 365;
+            
+            // Estimate system cost (rough industry average: ₹50,000 per m³/day for standard systems)
+            const systemCost = consumption * 50000 * (recoveryRate / 100);
+            const paybackMonths = Math.round((systemCost / annualSavings) * 12);
+            
+            // Display results
+            document.getElementById('savings-amount').textContent = annualSavings.toLocaleString('en-IN');
+            document.getElementById('payback-period').textContent = paybackMonths;
+            document.getElementById('daily-savings').textContent = waterSaved.toFixed(1);
+            document.getElementById('roi-result').style.display = 'block';
+        }
+        
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
+            const name = document.getElementById('name').value;
+            const company = document.getElementById('company').value;
             
-            // Show success message
-            alert(`Thank you ${name}! Your consultation request has been submitted. Our technical team will contact you within 24 hours.`);
+            alert(`Thank you ${name} from ${company}! Our technical team will contact you within 24 hours to schedule your free water audit.`);
             
-            // Reset form
             this.reset();
         });
         
-        // Navigation scroll effect
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.style.padding = '15px 0';
-                nav.style.boxShadow = '0 8px 30px rgba(0, 86, 168, 0.12)';
-            } else {
-                nav.style.padding = '20px 0';
-                nav.style.boxShadow = '0 4px 20px var(--shadow)';
-            }
-        });
-        
-        // Animate stats counter
-        function animateCounter(element, start, end, duration) {
-            let startTimestamp = null;
-            const step = (timestamp) => {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                element.innerHTML = Math.floor(progress * (end - start) + start);
-                if (progress < 1) {
-                    window.requestAnimationFrame(step);
+        // Animate metrics on scroll
+        function animateMetrics() {
+            const metrics = document.querySelectorAll('.metric-value');
+            metrics.forEach(metric => {
+                const value = metric.textContent;
+                const numericValue = parseInt(value);
+                if (!isNaN(numericValue)) {
+                    let start = 0;
+                    const end = numericValue;
+                    const duration = 2000;
+                    const increment = end / (duration / 16);
+                    
+                    const timer = setInterval(() => {
+                        start += increment;
+                        if (start >= end) {
+                            metric.textContent = value;
+                            clearInterval(timer);
+                        } else {
+                            metric.textContent = Math.floor(start);
+                        }
+                    }, 16);
                 }
-            };
-            window.requestAnimationFrame(step);
+            });
         }
         
-        // Initialize counter animation when in viewport
+        // Initialize metrics animation when in viewport
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const statNumbers = document.querySelectorAll('.stat-number');
-                    statNumbers.forEach(stat => {
-                        const target = parseInt(stat.textContent);
-                        animateCounter(stat, 0, target, 2000);
-                    });
+                    animateMetrics();
                     observer.disconnect();
                 }
             });
         }, { threshold: 0.5 });
         
-        observer.observe(document.querySelector('.hero-stats'));
+        observer.observe(document.querySelector('.metrics-bar'));
     </script>
 </body>
 </html>
-
